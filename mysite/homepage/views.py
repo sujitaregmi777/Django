@@ -17,7 +17,19 @@ def about(request):
 
 def skills(request):
     context = {
-        'skills': ['python', 'django', 'html', 'css']
+
     }
     template_name = 'homepage/skills.html'
     return render(request, template_name, context)
+
+def project(request):
+    context= {
+
+    }
+    return render(request, 'homepage/project.html', context)
+
+def contact(request):
+    context= {
+
+    }
+    return render(request, 'homepage/contact.html', context)

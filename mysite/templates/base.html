@@ -6,12 +6,14 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
 </head>
-<body class="min-h-screen bg-gradient-to-br from-green-200 via-blue-200 to-purple-200 flex flex-col">
+<body class="min-h-screen bg-gradient-to-br from-green-200 via-blue-200 to-purple-200 flex flex-col ">
     
-    <nav class="text-center py-4 bg-white/70 shadow font-semibold text-lg tracking-wide">
+    <nav class="text-center py-4 bg-white/70 shadow font-semibold text-lg tracking-wide ">
         <a href="{% url 'home' %}" class="mx-4 hover:underline underline-offset-4">Home</a>
         <a href="{% url 'about' %}" class="mx-4 hover:underline underline-offset-4">About</a>
         <a href="{% url 'skills' %}" class="mx-4 hover:underline underline-offset-4">Skills</a>
+        <a href="{% url 'project' %}" class="mx-4 hover:underline underline-offset-4">Project</a>
+        <a href="{% url 'contact' %}" class="mx-4 hover:underline underline-offset-4">Contact</a>
  
     <main class="flex-1 flex flex-col items-center justify-center">
         {% block content %}{% endblock %}
