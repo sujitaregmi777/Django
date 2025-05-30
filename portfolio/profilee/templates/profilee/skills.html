@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-lg dark:bg-gray-800">
+
+    <h2 class="text-3xl font-extrabold text-amber-600 dark:text-emerald-400 mb-4 text-center">My Skills</h2>
+    <p class="text-center text-gray-700 dark:text-gray-300 mb-8">Some of my skills are:</p>
+
+    <ul class="grid grid-cols-2 sm:grid-cols-3 gap-6 text-center text-gray-800 dark:text-gray-200 font-medium">
+        <li class="p-4 bg-amber-100 rounded-lg shadow hover:bg-amber-200 dark:bg-emerald-700 dark:hover:bg-emerald-600 transition cursor-default">
+            Python
+        </li>
+        <li class="p-4 bg-amber-100 rounded-lg shadow hover:bg-amber-200 dark:bg-emerald-700 dark:hover:bg-emerald-600 transition cursor-default">
+            Java
+        </li>
+        <li class="p-4 bg-amber-100 rounded-lg shadow hover:bg-amber-200 dark:bg-emerald-700 dark:hover:bg-emerald-600 transition cursor-default">
+            HTML
+        </li>
+        <li class="p-4 bg-amber-100 rounded-lg shadow hover:bg-amber-200 dark:bg-emerald-700 dark:hover:bg-emerald-600 transition cursor-default">
+            CSS
+        </li>
+        <li class="p-4 bg-amber-100 rounded-lg shadow hover:bg-amber-200 dark:bg-emerald-700 dark:hover:bg-emerald-600 transition cursor-default">
+            C#
+        </li>
+    </ul>
+</div>
+{% endblock %}

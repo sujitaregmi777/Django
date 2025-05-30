@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+{% block content %}   
+<div class="my-8"> 
+    <h2 class="text-4xl font-extrabold text-amber-600 dark:text-emerald-400 mb-4 text-center">My Projects</h2>
+    <p class=" text-2xl text-gray-700 dark:text-fuchsia-500 mb-8">Projects:</p>
+<ul class="grid grid-cols-2 sm:grid-cols-3 gap-6 text-center text-gray-800 dark:text-gray-200 font-medium">
+        <li class="p-4 bg-amber-100 rounded-lg shadow hover:bg-amber-200 dark:bg-emerald-700 dark:hover:bg-emerald-600 transition cursor-default">
+            Healthcare App
+        </li>
+        <li class="p-4 bg-amber-100 rounded-lg shadow hover:bg-amber-200 dark:bg-emerald-700 dark:hover:bg-emerald-600 transition cursor-default">
+            <a href="https://github.com/aakritigharti/Payrollsytem">Payroll System</a>
+        </li>
+        <li class="p-4 bg-amber-100 rounded-lg shadow hover:bg-amber-200 dark:bg-emerald-700 dark:hover:bg-emerald-600 transition cursor-default">
+            <a href="https://github.com/sujitaregmi777/Weather">Weather</a>
+        </li>
+        <li class="p-4 bg-amber-100 rounded-lg shadow hover:bg-amber-200 dark:bg-emerald-700 dark:hover:bg-emerald-600 transition cursor-default">
+            Interior design
+        </li>
+
+    </ul>
+</div>
+{% endblock %}

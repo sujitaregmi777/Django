@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 p-10 rounded-3xl max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10 shadow-lg ring-1 ring-blue-200">
+  
+  <!-- Image Section -->
+  <div class="flex-shrink-0">
+    <img src="{% static 'images/IMG_8938.jpeg' %}" alt="Photo" 
+         class="rounded-2xl shadow-2xl max-w-xs w-full object-cover transition-transform duration-300 hover:scale-105" />
+  </div>
+  
+  <div class="text-gray-900 max-w-xl">
+    <h2 class="text-3xl font-extrabold mb-6 text-blue-700 tracking-wide drop-shadow-md">
+      About Me
+    </h2>
+    <p class="text-lg leading-relaxed mb-4">
+      I am a passionate developer who loves building efficient, scalable, and user-friendly web applications. 
+      With a strong foundation in modern technologies and a keen eye for detail, I strive to deliver high-quality solutions that make a difference.
+    </p>
+    <p class="text-lg leading-relaxed">
+      Feel free to explore my portfolio to see my projects and skills in action. Let’s build something amazing together!
+    </p>
+  </div>
+  
+</div>
+{% endblock %}
