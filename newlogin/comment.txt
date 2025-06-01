@@ -1,0 +1,3 @@
+<a href="{% url 'register' %}">
+        <button type="submit" class="w-full py-3 px-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow transition">Register</button>
+      </a>
