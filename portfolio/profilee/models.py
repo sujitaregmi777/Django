@@ -3,7 +3,12 @@ from django.contrib.auth.models import User
 
 
 class Data(models.Model):
-    user = models.ManyToManyField(User, blank=True)
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True
+    )
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     start_date = models.DateField()
@@ -15,19 +20,19 @@ class Data(models.Model):
         return self.title
 
 
-class Details(models.Model):
-    name = models.CharField(max_length=100)
-    school_name = models.CharField(max_length=100)
-    class_name = models.CharField(max_length=100)
-    phone = models.CharField(max_length=15, blank=True)
-    gpa = models.CharField(max_length=5, blank=True)
-    data = models.ManyToManyField(Data, blank=True)
+# class Details(models.Model):
+#     name = models.CharField(max_length=100)
+#     school_name = models.CharField(max_length=100)
+#     class_name = models.CharField(max_length=100)
+#     phone = models.CharField(max_length=15, blank=True)
+#     gpa = models.CharField(max_length=5, blank=True)
+#     data = models.ManyToManyField(Data, blank=True)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
 class Education(models.Model):
-    details = models.ForeignKey(Details, on_delete=models.CASCADE, related_name='educations')
+    details = models.ForeignKey(Data, on_delete=models.CASCADE, related_name='educations')
     school_name = models.CharField(max_length=200)
     degree = models.CharField(max_length=200)
     start_year = models.IntegerField()
@@ -35,7 +40,7 @@ class Education(models.Model):
     description = models.TextField(blank=True)
 
 class Experience(models.Model):
-    details = models.ForeignKey(Details, on_delete=models.CASCADE, related_name='experiences')
+    details = models.ForeignKey(Data, on_delete=models.CASCADE, related_name='experiences')
     job_title = models.CharField(max_length=200)
     company = models.CharField(max_length=200)
     start_date = models.DateField()
@@ -43,7 +48,7 @@ class Experience(models.Model):
     description = models.TextField(blank=True)
 
 class Skill(models.Model):
-    details = models.ForeignKey(Details, on_delete=models.CASCADE, related_name='skills')
+    details = models.ForeignKey(Data, on_delete=models.CASCADE, related_name='skills')
     name = models.CharField(max_length=100)
     level = models.CharField(max_length=100, blank=True)
 

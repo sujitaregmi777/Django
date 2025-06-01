@@ -16,11 +16,11 @@ class SkillInline(admin.TabularInline):
     model = Skill
     extra = 1
 
-@admin.register(Details)
-class DetailsAdmin(admin.ModelAdmin):
-    list_display = ('name', 'school_name', 'class_name', 'phone', 'gpa')
-    search_fields = ('name', 'school_name', 'phone', 'gpa')
-    ordering = ('name',)
-    inlines = [EducationInline, SkillInline]
+# @admin.register(Details)
+# class DetailsAdmin(admin.ModelAdmin):
+#     list_display = ('name', 'school_name', 'class_name', 'phone', 'gpa')
+#     search_fields = ('name', 'school_name', 'phone', 'gpa')
+#     ordering = ('name',)
+#     inlines = [EducationInline, SkillInline]
 
 

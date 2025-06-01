@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import *
 
 def home(request):
-    details = Details.objects.first()  
+    details = Data.objects.first()  
     return render(request, 'profilee/home.html', {'details': details})
 
 def portfolio(request):
@@ -14,21 +14,21 @@ def skills(request):
     return render(request, 'profilee/skills.html', {'skills': skills})
 
 def contact(request):
-    details = Details.objects.first()
+    details = Data.objects.first()
     return render(request, 'profilee/contact.html', {'details': details})
 
 def about(request):
-    details = Details.objects.first()
+    details = Data.objects.first()
     return render(request, 'profilee/about.html', {'details': details})
 
 def resume(request):
-    details = Details.objects.first()
+    details = Data.objects.first()
     education = Education.objects.all()
     experience = Experience.objects.all()
     skills = Skill.objects.all()
 
     return render(request, 'profilee/resume.html', {
-        'details': details,
+        'data': data,
         'education': education,
         'experience': experience,
         'skills': skills,

@@ -5,14 +5,14 @@
 <div class="bg-white shadow-lg rounded-lg p-8 mb-10">
     <div class="text-center mb-6">
         <h1 class="text-4xl font-bold text-gray-800">{{ details.name }}</h1>
-        <p class="text-gray-600">{{ details.class_name }} | {{ details.school_name }}</p>
-        <p class="text-gray-600">Phone: {{ details.phone }} | GPA: {{ details.gpa }}</p>
+        <p class="text-gray-600"> {{ details.school_name }}</p>
+        <p class="text-gray-600">Phone: {{ details.phone }} </p>
     </div>
     <div class="mb-6">
         <h2 class="text-2xl font-semibold text-blue-700 border-b pb-1 mb-3">Education</h2>
         {% for edu in education %}
         <div class="mb-3">
-            <h3 class="font-semibold text-lg text-gray-800">{{ edu.degree }} - {{ edu.institution }}</h3>
+            {% comment %} <h3 class="font-semibold text-lg text-gray-800">{{ edu.degree }} - {{ edu.institution }}</h3> {% endcomment %}
             <p class="text-sm text-gray-600">{{ edu.start_date }} - {{ edu.end_date }}</p>
             <p class="text-gray-700">{{ edu.description }}</p>
         </div>
