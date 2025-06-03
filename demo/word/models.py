@@ -23,3 +23,21 @@ class Comment(BaseTimestampModel):
 
 def _str_(self):
     return f"{self.post.title}"
+
+
+class Student(models.Model):
+    name = models.CharField(max_length=100)
+    age = models.IntegerField()
+    email = models.EmailField()
+
+def _str_(self):
+    return self.name
+
+class Department(models.Model):
+    name = models.CharField(max_length=100)
+    faculty = models.CharField(max_length=100)
+    noofstd = models.IntegerField()
+
+
+def _str_(self):
+    return self.name
